@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Terror Cinematográfico</title>
+    <link rel="icon" type="image/x-icon" href="ImgEntIntermedia/Hereditary-649240958-large.jpg">
+    <meta name="description" content="Página de contacto del portal de terror cinematográfico">
+    <meta name="author" content="Aitor Jerez Clemente">
+    <!-- No external CSS to keep paths simple for this entrega -->
+    <link rel="preload" as="image" href="ImgEntIntermedia/Hereditary-649240958-large.jpg">
+    <link rel="preload" as="image" href="ImgEntIntermedia/TheExorcist.jpg">
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Entrega-Intermedia.html#inicio">Inicio</a></li>
+            <li><a href="Entrega-Intermedia.html#peliculas">Películas</a></li>
+            <li><a href="Entrega-Intermedia.html#series">Series</a></li>
+            <li><strong>Contacto</strong></li>
+            <li><a href="Entrega-Intermedia.html#acercaDe">Acerca de</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contacto-info">
+            <h2>Información de contacto</h2>
+            <div class="contacto-grid">
+                <div>
+                    <h3>Escríbenos</h3>
+                    <p>Email: <a href="mailto:info@terrorcine.example">info@terrorcine.example</a></p>
+                    <p>Teléfono: <a href="tel:+34900111222">+34&nbsp;900&nbsp;111&nbsp;222</a></p>
+                </div>
+                <div>
+                    <h3>Ubicación</h3>
+                    <p>Avenida del Cine 13, 28000, Madrid</p>
+                    <p>Horario: L-V 10:00–18:00</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formulario de Contacto</h2>
+            <form action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Información Personal</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50" placeholder="Introduce tu nombre completo">
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="123456789">
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="16" max="100" placeholder="25">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias de Terror</legend>
+
+                    <label for="genero">Género de terror favorito:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="psicologico">Terror Psicológico</option>
+                        <option value="slasher">Slasher</option>
+                        <option value="found_footage">Found Footage</option>
+                        <option value="body_horror">Body Horror</option>
+                        <option value="folk_horror">Folk Horror</option>
+                        <option value="supernatural">Supernatural</option>
+                    </select>
+
+                    <fieldset>
+                        <legend>Nivel de tolerancia al terror:</legend>
+                        <input type="radio" id="principiante" name="experiencia" value="principiante">
+                        <label for="principiante">Principiante</label>
+
+                        <input type="radio" id="intermedio" name="experiencia" value="intermedio">
+                        <label for="intermedio">Intermedio</label>
+
+                        <input type="radio" id="avanzado" name="experiencia" value="avanzado">
+                        <label for="avanzado">Avanzado</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Películas de terror vistas (múltiple selección):</legend>
+                        <input type="checkbox" id="hereditary" name="peliculas_hereditary" value="hereditary">
+                        <label for="hereditary">Hereditary</label>
+
+                        <input type="checkbox" id="exorcist" name="peliculas_exorcist" value="exorcist">
+                        <label for="exorcist">The Exorcist</label>
+
+                        <input type="checkbox" id="shining" name="peliculas_shining" value="shining">
+                        <label for="shining">The Shining</label>
+
+                        <input type="checkbox" id="halloween" name="peliculas_halloween" value="halloween">
+                        <label for="halloween">Halloween</label>
+
+                        <input type="checkbox" id="getout" name="peliculas_getout" value="getout">
+                        <label for="getout">Get Out</label>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mensaje</legend>
+
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required maxlength="100" placeholder="Asunto del mensaje">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required minlength="10" maxlength="1000" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                    <label for="fecha">Fecha preferida de contacto:</label>
+                    <input type="date" id="fecha" name="fecha" min="2025-01-01">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Configuración</legend>
+
+                    <input type="checkbox" id="newsletter" name="newsletter" value="si">
+                    <label for="newsletter">Suscribirse al boletín de noticias</label>
+
+                    <input type="checkbox" id="privacidad" name="privacidad" value="acepto" required>
+                    <label for="privacidad">Acepto la <a href="#politica-privacidad">política de privacidad</a></label>
+                </fieldset>
+
+                <button type="submit">Enviar Mensaje</button>
+                <button type="reset">Limpiar Formulario</button>
+            </form>
+        </section>
+
+        <section id="politica-privacidad">
+            <h2>Política de privacidad</h2>
+            <p>Los datos enviados se usarán exclusivamente para responder a tu consulta.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portal de Terror Cinematográfico - Aitor Jerez Clemente</p>
+        <p>
+            <a href="Entrega-Intermedia.html#inicio">Inicio</a> |
+            <span>Contacto</span> |
+            <a href="Entrega-Intermedia.html#acercaDe">Acerca de</a>
+        </p>
+    </footer>
+</body>
+</html>
+
